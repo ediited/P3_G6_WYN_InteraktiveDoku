@@ -1,0 +1,19 @@
+
+{
+	/*
+
+	Body CSS
+
+	*/ 
+}
+
+@font-face {
+
+	font-family: ITL /*Ignite the Light*/;
+	src: url (../assets/font/Kimberly Geswein - Ignite the Light.tff);	
+}
+
+* {
+	font-family: ITL; 
+	color: blue;
+}
