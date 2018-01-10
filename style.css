@@ -87,7 +87,7 @@ p{
 
 .textArea-right {
 	float: right;
-	align-self: right;
+	width: auto;
 	margin-right: 120px;
 	margin-left: auto;
 	width: 500;
@@ -102,7 +102,20 @@ p{
 	margin-left: 12px;
     margin-top: 28px;
     width: 73px;
+}
 
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+.clearfix {
+    display: block;
 }
 
 #mainScreen1 {
