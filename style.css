@@ -1,70 +1,118 @@
 @font-face {
-    font-family: myFirstFont;
+    font-family: IgniteTheLight;
     src: url(assets/font/IgniteTheLight/KimberlyGeswein-IgniteTheLight.ttf) format('truetype');
 }
 
-div {
-    font-family: myFirstFont;
-    color: #7AD1B5;
-    font-size: 72px;
+@font-face {
+	font-family: GlacialIndifference;
+    src: url(assets/font/GlacialIndifference/GlacialIndifference-Regular.otf) format('opentype');	
+}
+
+@font-face {
+	font-family: BarlowSemiCondensed;
+    src: url(assets/font/BarlowSemiCondensed/BarlowSemiCondensed-Light.ttf) format('truetype');
+}
+
+@font-face {   
+    font-family: BarlowSemiCondensedMedium;
+    src: url(assets/font/BarlowSemiCondensed/BarlowSemiCondensed-Medium.ttf) format('truetype');
+}
+
+:root{
+	--hell: #D8C1B6;
+	--mittel: #CCAA99;
+	--dunkel: #3C2520;
+	--grau: #2B2322;
+	--akzent: #7AD1B5;
+	--text: #6E605E;
+}
+
+html{
+
 }
 
 body {
-
 	margin: 0;
 	padding: 0;
 }
 
-.page1 div{
+h1 {
+	font-family: IgniteTheLight;
+    font-size: 300px;
+    margin: 0;
+    margin-left: 120px;
+    box-sizing: border-box;
+    height: 300px;
+    color: var(--hell);
+}
 
+h2 {
+	font-family: GlacialIndifference;
+	font-size: 43px;
+    font-weight: normal;
+    margin-left: 230px;
+    color: var(--grau);
+}
+
+h3 {
+	font-family: BarlowSemiCondensedMedium;
+	font-size: 20px;
+	font-weight: normal;
+	font-style: normal;
+	margin-left: 230px;
+	color: var(--text);
+}
+
+p{
+	font-family: BarlowSemiCondensed;
+	font-size: 18px;
+	font-weight: normal;
+	font-style: normal;
+	margin-left: 230px;
+	color: var(--text);
+}
+
+.screen {
 	width: 100%;
 	height: 100vh;
-
-}
-.screen1 {
-
-	background-color: blue;
-
-}
-
-.screen2 {
-
-	background-color: green;
-
-}
-
-.screen3 {
-
-	background-color: red;
-
-}
-
-.screen4 {
-
-	background-color: pink;
-
-}
-
-.screen5 {
-
 	background-color: white;
+}
+
+#mainScreen1 {
+	background-color: var(--hell);
+}
+
+#mainScreen2 {
+
 
 }
 
-.screen6 {
+#mainScreen3 {
 
-	background-color: yellow;
-
-}
-
-.screen7 {
-
-	background-color: orange;
 
 }
 
-.screen8 {
+#mainScreen4 {
 
-	background-color: black;
+
+}
+
+#mainScreen5 {
+
+
+}
+
+#mainScreen6 {
+
+
+}
+
+#mainScreen7 {
+
+
+}
+
+#mainScreen8 {
+
 
 }
