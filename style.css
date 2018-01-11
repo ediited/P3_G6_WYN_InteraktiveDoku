@@ -10,14 +10,6 @@
 @font-face {
   font-family: BarlowSemiCondensedMedium;
   src: url(assets/font/BarlowSemiCondensed/BarlowSemiCondensed-Medium.ttf) format("truetype"); }
-:root {
-  --hell: #D8C1B6;
-  --mittel: #CCAA99;
-  --dunkel: #3C2520;
-  --grau: #2B2322;
-  --akzent: #7AD1B5;
-  --text: #6E605E; }
-
 html {
   font-weight: 200; }
 
@@ -50,7 +42,7 @@ h1 {
   margin-left: 0px;
   box-sizing: border-box;
   height: 310px;
-  color: var(--hell); }
+  color: #D8C1B6; }
 
 h2 {
   font-family: GlacialIndifference;
@@ -58,7 +50,7 @@ h2 {
   font-weight: normal;
   margin: 0px;
   margin-left: 110px;
-  color: var(--grau); }
+  color: #2B2322; }
 
 h3 {
   font-family: BarlowSemiCondensedMedium;
@@ -66,7 +58,7 @@ h3 {
   font-weight: normal;
   font-style: normal;
   margin-left: 110px;
-  color: var(--text);
+  color: #6E605E;
   margin-bottom: 0px; }
 
 p {
@@ -77,7 +69,7 @@ p {
   font-style: normal;
   margin-left: 110px;
   margin-top: 8px;
-  color: var(--text);
+  color: #6E605E;
   width: 430px; }
 
 .screen {
@@ -96,7 +88,7 @@ p {
 .line {
   float: left;
   border-bottom: solid;
-  border-color: var(--hell);
+  border-color: #D8C1B6;
   border-width: 4px;
   box-shadow: 0px 3px 3px #BBBBBB;
   margin-left: 12px;
@@ -118,6 +110,6 @@ p {
 
 #mainScreen1 {
   height: 100vh;
-  background-color: var(--hell); }
+  background-color: #D8C1B6; }
 
 /*# sourceMappingURL=style.css.map */
