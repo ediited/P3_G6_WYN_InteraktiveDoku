@@ -36,6 +36,28 @@ body {
 	padding: 0;
 }
 
+.nav{
+  background-color: #ffffff;
+  color:#3C2520;
+  list-style:none;
+  font-family: "Glacial Indifference";
+  text-align: center;
+  padding:0 25px 0 25px;
+}
+
+.nav > li {
+  display: inline-block;
+  padding: 0 25px 0 25px;
+}
+
+.nav > li > a {
+  text-decoration: none;
+  color:#3C2520;
+}
+
+.nav > li > a:hover {
+  color: #CCAA99;
+}
 #main{
     font-size:200px;
     color:white;
@@ -60,7 +82,7 @@ body {
 }
 
 #h1dunkel{
-    font-size: 20px;
+    font-size: 20px;
     color: $dunkel;
     margin-left:110px;
 }
@@ -120,6 +142,10 @@ p{
 	margin-right: 120px;
 	margin-left: auto;
 	width: 500;
+}
+
+.tworows {
+  column-count: 2;
 }
 
 .line{
