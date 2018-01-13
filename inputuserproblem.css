@@ -12,7 +12,7 @@
   font-family: BarlowSemiCondensedMedium;
   src: url(assets/font/BarlowSemiCondensed/BarlowSemiCondensed-Medium.ttf) format("truetype"); }
 html {
-  font-weight: 200; }
+  font-weight: 300; }
 
 body {
   margin: 0;
@@ -47,15 +47,15 @@ body {
   font-size: 27px;
   color: white;
   margin-left: 180px;
-  margin-top: 160px; }
+  margin-top: 160px;
+  float: left; }
 
 #WYN1 {
-  width: 600px;
-  height: 600px;
-  position: relative;
-  float: right;
-  margin-right: 100px;
-  margin-top: 80px; }
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 370px; }
 
 #h1dunkel {
   font-size: 20px;
@@ -72,12 +72,14 @@ h1 {
   color: #D8C1B6; }
 
 h2 {
-  font-family: GlacialIndifference;
-  font-size: 36px;
-  font-weight: normal;
-  margin: 0px;
-  margin-left: 110px;
-  color: #2B2322; }
+  font-family: IgniteTheLight;
+  font-size: 30px;
+  margin: 0;
+  margin-left: 150px;
+  margin-top: -5px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  color: #D8C1B6; }
 
 h3 {
   font-family: BarlowSemiCondensedMedium;
@@ -109,6 +111,18 @@ p {
   margin-top: 8px;
   color: #6E605E;
   width: 430px; }
+
+.zitatimtext2 {
+  font-family: BarlowSemiCondensed;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-style: italic;
+  margin-left: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #D8C1B6;
+  width: 630px; }
 
 .screen {
   background-color: white; }
@@ -177,4 +191,14 @@ p {
   height: 100vh;
   background-color: #D8C1B6; }
 
-/*# sourceMappingURL=input.css.map */
+.trennerhell {
+  height: 800px;
+  width: 100vw;
+  background-color: #D8C1B6; }
+
+.trennerdunkel {
+  height: 800px;
+  width: 100vw;
+  background-color: #3C2520; }
+
+/*# sourceMappingURL=inputuserproblem.css.map */
