@@ -114,20 +114,23 @@ p {
 
 .zitatimtext2 {
   font-family: BarlowSemiCondensed;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 37px;
   font-weight: normal;
   font-style: italic;
-  margin-left: 60px;
+  margin-left: 100px;
   margin-top: 30px;
   margin-bottom: 30px;
   color: #D8C1B6;
-  width: 630px; }
+  width: 330px; }
 
 .screen {
   background-color: white; }
 
 .textArea-left {
+  margin-left: 120px; }
+
+.textArea-middle {
   margin-left: 120px; }
 
 .textArea-right {
