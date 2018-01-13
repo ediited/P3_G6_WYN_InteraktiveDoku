@@ -43,7 +43,6 @@ $textcolor: #6E605E;
 
 html{
     font-weight: 300;
-
 }
 
 body {
@@ -73,6 +72,7 @@ body {
 .nav > li > a:hover {
   color: #CCAA99;
 }
+
 #main{
     font-size:200px;
     color:white;
@@ -107,7 +107,6 @@ h1 {
     font-size: 270px;
     margin: 0;
     margin-left: 0px;
-    box-sizing: border-box;
     height: 310px;
     color: $hell;
 }
@@ -193,6 +192,7 @@ p{
 .tworowshead {
   margin-left: 60px;
 }
+
 .tworows {
   column-count: 2;
 }
@@ -239,9 +239,11 @@ p{
     height: 0;
     visibility: hidden;
 }
+
 .clearfix {
     display: inline-block;
 }
+
 .clearfix {
     display: block;
 }

@@ -24,7 +24,7 @@ h1 {
   vertical-align: baseline; }
 
 html {
-  font-weight: 300; }
+  font-weight: 200; }
 
 body {
   margin: 0;
@@ -59,15 +59,15 @@ body {
   font-size: 27px;
   color: white;
   margin-left: 180px;
-  margin-top: 160px;
-  float: left; }
+  margin-top: 160px; }
 
 #WYN1 {
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  margin-left: 100px;
-  margin-top: 370px; }
+  width: 600px;
+  height: 600px;
+  position: relative;
+  float: right;
+  margin-right: 100px;
+  margin-top: 80px; }
 
 #h1dunkel {
   font-size: 20px;
@@ -84,14 +84,12 @@ h1 {
   color: #D8C1B6; }
 
 h2 {
-  font-family: IgniteTheLight;
-  font-size: 30px;
-  margin: 0;
-  margin-left: 150px;
-  margin-top: -5px;
-  margin-bottom: 30px;
-  box-sizing: border-box;
-  color: #D8C1B6; }
+  font-family: GlacialIndifference;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0px;
+  margin-left: 110px;
+  color: #2B2322; }
 
 h3 {
   font-family: BarlowSemiCondensedMedium;
@@ -124,25 +122,10 @@ p {
   color: #6E605E;
   width: 430px; }
 
-.zitatimtext2 {
-  font-family: BarlowSemiCondensed;
-  font-size: 25px;
-  line-height: 37px;
-  font-weight: normal;
-  font-style: italic;
-  margin-left: 110px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  color: #D8C1B6;
-  width: 330px; }
-
 .screen {
   background-color: white; }
 
 .textArea-left {
-  margin-left: 120px; }
-
-.textArea-middle {
   margin-left: 120px; }
 
 .textArea-right {
@@ -206,14 +189,4 @@ p {
   height: 100vh;
   background-color: #D8C1B6; }
 
-.trennerhell {
-  height: 800px;
-  width: 100vw;
-  background-color: #D8C1B6; }
-
-.trennerdunkel {
-  height: 800px;
-  width: 100vw;
-  background-color: #3C2520; }
-
-/*# sourceMappingURL=inputl%C3%B6sung.css.map */
+/*# sourceMappingURL=input.css.map */

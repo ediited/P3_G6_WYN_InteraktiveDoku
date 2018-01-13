@@ -131,6 +131,7 @@ h3 {
 	margin-left: 110px;
 	color: $textcolor;
 	margin-bottom: 0px;
+    width: 430px;
 }
 
 p{
@@ -163,7 +164,7 @@ p{
   line-height: 37px;
   font-weight: normal;
   font-style: italic;
-  margin-left: 100px;
+  margin-left: 110px;
   margin-top: 30px;
   margin-bottom: 30px;
   color: $hell;
@@ -261,4 +262,9 @@ p{
   height: 800px;
   width: 100vw;
   background-color: $dunkel;
+}
+
+.textoben{
+  margin-top: 55px;
+  margin-bottom: 100px;
 }

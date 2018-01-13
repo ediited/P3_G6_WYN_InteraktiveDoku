@@ -18,6 +18,21 @@
     src: url(assets/font/BarlowSemiCondensed/BarlowSemiCondensed-Medium.ttf) format('truetype');
 }
 
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 
 $hell: #D8C1B6;
 $mittel: #CCAA99;
@@ -149,7 +164,7 @@ p{
   line-height: 37px;
   font-weight: normal;
   font-style: italic;
-  margin-left: 100px;
+  margin-left: 110px;
   margin-top: 30px;
   margin-bottom: 30px;
   color: $hell;
