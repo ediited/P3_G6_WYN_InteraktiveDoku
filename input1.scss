@@ -71,15 +71,15 @@ body {
     color:white;
     margin-left: 180px;
     margin-top: 160px;
+    float:left;
 }
 
 #WYN1 {
-    width: 600px;
-    height: 600px;
-    position: relative;
-    float: right;
-    margin-right: 100px;
-    margin-top: 80px;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 370px;
 }
 
 #h1dunkel{
@@ -231,4 +231,16 @@ p{
 #mainScreen1 {
 	height: 100vh;
 	background-color: $hell;
+}
+
+.trennerhell {
+  height: 800px;
+  width: 100vw;
+  background-color: $hell;
+}
+
+.trennerdunkel {
+  height: 800px;
+  width: 100vw;
+  background-color: $dunkel;
 }
