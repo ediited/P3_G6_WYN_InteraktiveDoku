@@ -36,7 +36,8 @@ body {
   list-style: none;
   font-family: "Glacial Indifference";
   text-align: center;
-  padding: 0 25px 0 25px; }
+  padding: 0 25px 0 25px;
+  margin: 15px; }
 
 .nav > li {
   display: inline-block;
@@ -103,7 +104,7 @@ h4 {
   font-size: 30px;
   margin: 0;
   margin-left: 150px;
-  margin-top: -5px;
+  margin-top: -66px;
   margin-bottom: 30px;
   box-sizing: border-box;
   color: #D8C1B6; }
@@ -116,6 +117,26 @@ h3 {
   margin-left: 110px;
   color: #6E605E;
   margin-bottom: 0px; }
+
+h3 {
+  font-family: BarlowSemiCondensedMedium;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 110px;
+  color: #6E605E;
+  margin-bottom: 0px;
+  width: 430px; }
+
+h5 {
+  font-family: IgniteTheLight;
+  font-size: 270px;
+  margin: 0px;
+  margin-top: -250px;
+  margin-left: 300px;
+  box-sizing: border-box;
+  height: 310px;
+  color: #D8C1B6; }
 
 p {
   font-family: BarlowSemiCondensed;
@@ -151,8 +172,27 @@ p {
   color: #D8C1B6;
   width: 630px; }
 
+.zitatimtext3 {
+  font-family: BarlowSemiCondensed;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-style: italic;
+  margin-left: 110px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #D8C1B6;
+  width: 430px; }
+
 .screen {
   background-color: white; }
+
+a:link {
+  color: #D8C1B6;
+  text-decoration: none; }
+
+a:hover {
+  color: #3C2520; }
 
 .textArea-left {
   margin-left: 120px; }

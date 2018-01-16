@@ -57,6 +57,7 @@ body {
   font-family: "Glacial Indifference";
   text-align: center;
   padding:0 25px 0 25px;
+  margin:15px;
 }
 
 .nav > li {
@@ -135,32 +136,54 @@ h4 {
   font-size: 30px;
   margin: 0;
   margin-left: 150px;
-  margin-top: -5px;
+  margin-top: -66px;
   margin-bottom: 30px;
   box-sizing: border-box;
   color: $hell;
 }
 
 h3 {
-	font-family: BarlowSemiCondensedMedium;
-	font-size: 18px;
-	font-weight: normal;
-	font-style: normal;
-	margin-left: 110px;
-	color: $textcolor;
-	margin-bottom: 0px;
+  font-family: BarlowSemiCondensedMedium;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 110px;
+  color: $textcolor;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-family: BarlowSemiCondensedMedium;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 110px;
+  color: $textcolor;
+  margin-bottom: 0px;
+  width: 430px;
+}
+
+h5 {
+  font-family: IgniteTheLight;
+  font-size: 270px;
+  margin: 0px;
+  margin-top: -250px;
+  margin-left: 300px;
+  box-sizing: border-box;
+  height: 310px;
+  color: $hell;
 }
 
 p{
-	font-family: BarlowSemiCondensed;
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: normal;
-	font-style: normal;
-	margin-left: 110px;
-	margin-top: 8px;
-	color: $textcolor;
-	width: 430px;
+  font-family: BarlowSemiCondensed;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 110px;
+  margin-top: 8px;
+  color: $textcolor;
+  width: 430px;
 }
 
 .zitatimtext{
@@ -187,9 +210,32 @@ p{
   color: $hell;
   width: 630px;
 }
-.screen {
-	background-color: white;
+
+.zitatimtext3{
+  font-family: BarlowSemiCondensed;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-style: italic;
+  margin-left: 110px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: $hell;
+  width: 430px;
 }
+
+.screen {
+  background-color: white;
+}
+
+a:link {
+    color: $hell;
+    text-decoration: none;
+  }
+
+a:hover {
+    color: $dunkel;
+  }
 
 .textArea-left {
 	margin-left: 120px;
@@ -199,11 +245,11 @@ p{
   margin-left: 120px; }
 
 .textArea-right {
-	float: right;
-	width: auto;
-	margin-right: 120px;
-	margin-left: auto;
-	width: 500;
+  float: right;
+  width: auto;
+  margin-right: 120px;
+  margin-left: auto;
+  width: 500;
 }
 
 .tworowshead {
@@ -250,22 +296,22 @@ p{
 }
 
 .clearfix:after {
-    clear: both;
-    content: ".";
-    display: block;
-    height: 0;
-    visibility: hidden;
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
 }
 .clearfix {
-    display: inline-block;
+  display: inline-block;
 }
 .clearfix {
-    display: block;
+  display: block;
 }
 
 #mainScreen1 {
-	height: 100vh;
-	background-color: $hell;
+  height: 100vh;
+  background-color: $hell;
 }
 
 .trennerhell {
