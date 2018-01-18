@@ -34,11 +34,40 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
     <script src= "main.js" type="text/javascript"></script>
 	<title>WYN</title>
 
+
+	<!-- wyn change color on hover -->
+	<script type="text/javascript">
+        var currHover = false;
+
+
+        window.onload = function() {
+                function test() {
+                    if ($('#WYNfixed:hover').length != 0 && !currHover ) {
+                        console.log("menüwyn wird überhovert");
+
+                        $("#WYNfixed").css("height", "70px"); 
+
+                        currHover = true;
+                    }
+
+                    if ($('#WYNfixed:hover').length == 0 && currHover) {
+                        console.log("menüwyn wird verlassen");
+
+                        $("#WYNfixed").css("height", "30px");
+
+                        currHover = false;
+                    }
+
+                }
+                setInterval(test, 10);
+            }
+	</script>
+
 </head>
 <body>
 
 <div class="navbar">
-	<a href="index.html"><img id="WYNfixed" src="images/WYNstartpage.png"></a>
+	<a href="indexstartseite.html"><img id="WYNfixed" src="images/WYNstartpage.png"></a>
 	<ul class="nav">
 		<li><a href="indexuserproblem.html">User & Problem</a></li>
 		<li><a href="indexlösung.html">Lösung</a></li>
@@ -56,7 +85,7 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 	
 	<div id = "mainScreen1" class = "screen">
 		<div>
-			<img id="WYN1"src="images/WYNstartpage.png" >
+			<img id="WYN1" src="images/WYNstartpage.png" >
 		</div>
 	</div>
 	<!--</section>!-->
