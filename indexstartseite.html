@@ -35,34 +35,6 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 	<title>WYN</title>
 
 
-	<!-- wyn change color on hover -->
-	<script type="text/javascript">
-        var currHover = false;
-
-
-        window.onload = function() {
-                function test() {
-                    if ($('#WYNfixed:hover').length != 0 && !currHover ) {
-                        console.log("menüwyn wird überhovert");
-
-                        $("#WYNfixed").css("height", "70px"); 
-
-                        currHover = true;
-                    }
-
-                    if ($('#WYNfixed:hover').length == 0 && currHover) {
-                        console.log("menüwyn wird verlassen");
-
-                        $("#WYNfixed").css("height", "30px");
-
-                        currHover = false;
-                    }
-
-                }
-                setInterval(test, 10);
-            }
-	</script>
-
 </head>
 <body>
 
