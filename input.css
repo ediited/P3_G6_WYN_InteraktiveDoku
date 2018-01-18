@@ -37,7 +37,10 @@ body {
   font-family: "Glacial Indifference";
   text-align: center;
   padding: 0 25px 0 25px;
-  margin: 15px; }
+  margin: 15px;
+  opacity: 1;
+  margin-left; 
+}
 
 .nav > li {
   display: inline-block;
@@ -66,7 +69,8 @@ img#WYNfixed {
   width: 50px;
   height: 50px;
   position: fixed;
-  top: 3px; }
+  top: 3px; 
+  opacity: 1}
 
 #WYN1 {
   width: 700px;

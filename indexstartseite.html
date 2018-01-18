@@ -31,24 +31,85 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
     <script src= "https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-    <script src= "main.js" type="text/javascript"></script>
 	<title>WYN</title>
+
+
+	<!-- wyn change color on hover -->
+	<script type="text/javascript">
+		var currHover = false;	
+
+
+		  window.onload = function() {            
+function test() {
+  		if ($('#WYNfixed:hover').length != 0 && !currHover ) {
+    		console.log("menüwyn wird überhovert");
+
+    		$("#WYNfixed").css({
+    			"height":"50",
+    			"width":"50",
+    			"transition":"opacity 0.5 ease, height 0.5s ease, width 0.4s ease",
+    			"opacity":"1"
+
+
+    			});
+
+    		$(".nav").css({
+    			"transition":"opacity 0.5 ease, margin.left 5s ease, width 0.4s ease",
+    			"opacity":"1",
+    			"margin-left":"15",
+    			"margin-top":"15"
+    		});
+
+    		currHover = true;
+		}	
+
+		if ($('#WYNfixed:hover').length == 0 && currHover) {
+    		console.log("menüwyn wird verlassen");
+    		$("#WYNfixed").css({
+    			"height":"30",
+    			"width":"30",
+    			"transition":"opacity 0.5s ease, height 0.5s ease, width 0.4s ease",
+    			"opacity":"0.2"
+
+
+    			});
+    		$(".nav").css({
+    			"transition":"opacity 0.5 ease, margin-left 5s ease, width 0.4s ease",
+    			"opacity":"0.1",
+    			"margin-left":"-2000",
+    			"margn-top":"-100"
+    		});	
+    		currHover = false;
+		}	
+			
+}
+setInterval(test, 10);
+}
+
+	
+
+
+
+	</script>
+
 
 </head>
 <body>
-
-<div class="navbar">
+<div id = "WYNwrapper">
 	<a href="index.html"><img id="WYNfixed" src="images/WYNstartpage.png"></a>
-	<ul class="nav">
-		<li><a href="indexuserproblem.html">User & Problem</a></li>
-		<li><a href="indexlösung.html">Lösung</a></li>
-		<li><a href="indexdesign.html">Design</a></li>
-		<li><a href="indextechnik.html">Technik</a></li>
-		<li><a href="indextherapie.html">Therapeutisches</a></li>
-		<li><a href="indexmanagement.html">Management</a></li>
-	</ul>
-</div>
+	<div class="navbar">
 
+
+		<ul class="nav">
+			<li><a href="indexuserproblem.html">User & Problem</a></li>
+			<li><a href="indexlösung.html">Lösung</a></li>
+			<li><a href="indexdesign.html">Design</a></li>
+			<li><a href="indextechnik.html">Technik</a></li>
+			<li><a href="indextherapie.html">Therapeutisches</a></li>
+			<li><a href="indexmanagement.html">Management</a></li>
+		</ul>
+	</div>
+</div>
 <div class = "page1">
 
 
