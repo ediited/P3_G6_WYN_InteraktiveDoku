@@ -10,6 +10,17 @@ Lauritz Kramberger-Kaplan
 		
 im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschule Darmstadt. 
 
+
+__/\\\______________/\\\________________/\\\\\_____/\\\_        
+ _\/\\\_____________\/\\\_______________\/\\\\\\___\/\\\_       
+  _\/\\\_____________\/\\\____/\\\__/\\\_\/\\\/\\\__\/\\\_      
+   _\//\\\____/\\\____/\\\____\//\\\/\\\__\/\\\//\\\_\/\\\_     
+    __\//\\\__/\\\\\__/\\\______\//\\\\\___\/\\\\//\\\\/\\\_    
+     ___\//\\\/\\\/\\\/\\\________\//\\\____\/\\\_\//\\\/\\\_   
+      ____\//\\\\\\//\\\\\______/\\_/\\\_____\/\\\__\//\\\\\\_  
+       _____\//\\\__\//\\\______\//\\\\/______\/\\\___\//\\\\\_ 
+        ______\///____\///________\////________\///_____\/////__
+
 -->
 
 <html>
@@ -32,12 +43,24 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
     <script src= "https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+	<script src="libraries/jquery.konami.js" type="text/javascript"></script>
 	<title>WYN</title>
 
 
 	<!-- wyn change color on hover -->
 	<script type="text/javascript">
 		$(document).ready(function(){
+
+
+			//im Code verstecken! nicht vergessen
+			//SUPER WICHTIG DO NOT TOUCH !!!!!
+			  $( window ).konami({
+			cheat: function() {
+			$("*").toggleClass("masterDesign");
+			}
+			});
+			//AUF KEINENEN FALL DIESE EINE ZEILE LÖSCHEN 
+			//sonst funktioniert das echt wichtige Easteregg nicht
 
 			//variablen um permanente Zustände zu merken 
 			//eg ob das menü offen ist oder sowas
@@ -298,9 +321,9 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 
     <!-- team Bilder -->
 
-    <img src="/images/anne_cutout_bw.png" id="anneImg">
-    <img src="/images/domenika_cutout_bw.png" id="domenikaImg">
-    <img src="/images/lauritz_cutout_bw.png" id="lauritzImg">
+    <img src="images/anne_cutout_bw.png" id="anneImg">
+    <img src="images/domenika_cutout_bw.png" id="domenikaImg">
+    <img src="images/lauritz_cutout_bw.png" id="lauritzImg">
 
     <div id="anneText" class="teamText">
 
@@ -524,7 +547,7 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 
 </div>
 
-
+<!--
 	<script>
 
 	$(function () { // wait for document ready
@@ -548,7 +571,7 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 				.addTo(controller);
 		}
 	});
-</script> 
-
+</sript> 
+-->
 </body>
 </html>

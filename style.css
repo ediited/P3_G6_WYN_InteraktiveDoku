@@ -374,11 +374,11 @@ a:hover {
   position:relative;
   background-color: #3C2520; }
 
-/*
-  * {
+
+  .masterDesign {
    -moz-box-shadow:    inset 0 0 10px #000000;
    -webkit-box-shadow: inset 0 0 10px #000000;
    box-shadow:         inset 0 0 10px #000000;
 }
-*/
+
 /*# sourceMappingURL=style.css.map */
