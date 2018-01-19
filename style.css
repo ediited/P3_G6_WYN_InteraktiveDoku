@@ -253,8 +253,15 @@ h7 {
   margin-top: 100px;
   margin-left: 25px;
   color: #2B2322;
+}
+
+h8 {
+  font-family: IgniteTheLight;
+  font-size: 170px;
+  color: #D8C1B6;
 
 }
+
 
 p {
   font-family: BarlowSemiCondensed;
@@ -302,6 +309,9 @@ p {
   color: #D8C1B6;
   width: 430px; }
 
+.heading1{
+  margin-top:50px;
+}
 .screen {
   background-color: white;
 }
@@ -309,6 +319,7 @@ p {
 .screen1 {
   background-color: white;
   margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 a:link {
@@ -407,7 +418,7 @@ a:hover {
   background-color: #3C2520; }
 
 .trennerblau {
-  height: 200px;
+  height: 300px;
   width: 100vw;
   position:relative;
   background-color: #DBE4E5; }
