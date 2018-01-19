@@ -218,15 +218,6 @@ h3 {
   font-style: normal;
   margin-left: 110px;
   color: #6E605E;
-  margin-bottom: 0px; }
-
-h3 {
-  font-family: BarlowSemiCondensedMedium;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  margin-left: 110px;
-  color: #6E605E;
   margin-bottom: 0px;
   width: 430px; }
 
@@ -239,6 +230,16 @@ h5 {
   box-sizing: border-box;
   height: 310px;
   color: #D8C1B6; }
+
+
+h6 {
+  font-family: GlacialIndifference;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0px;
+  margin-left: 110px;
+  color: #D8C1B6; }
+
 
 p {
   font-family: BarlowSemiCondensed;
