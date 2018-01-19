@@ -15,6 +15,7 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 <html>
 <head>
 
+
 	<style type="text/css">
 	.panel {
 		height: 1080px;
@@ -36,26 +37,25 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 
 	<!-- wyn change color on hover -->
 	<script type="text/javascript">
+		$(document).ready(function(){
+
+			//variablen um permanente Zustände zu merken 
+			//eg ob das menü offen ist oder sowas
+			var currHover = false;
+			var wynMenuActive = false;
+			var personInFocus = false;
 
 
-	//variablen um permanente Zustände zu merken 
-	//eg ob das menü offen ist oder sowas
-		var currHover = false;
-		var wynMenuActive = false;
-		var personInFocus = false;
+			$("WYNfixed").click(function() {
+				console.log("test");
+				$('.nav').toggleClass('navIN');
+			});	
 
 
 
-
-		//wird sofort bei start der website aufgerufen;
-		window.onload = function() {            
-			
-			//main Methode, loopt alle 5 millisekunden 
-			function main() {
-
-				$("#lauritzImg").click(function(){
-					if(!personInFocus){
-						personInFocus = true;
+			$("#lauritzImg").click(function(){
+				if(!personInFocus){
+					personInFocus = true;
 					$("#lauritzImg").addClass("imageFocus");
 					// $("#domenikaImg").addClass("imageFocus");
 					// $("#anneImg").addClass("imageFocus");
@@ -63,21 +63,18 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 					// $("#lauritzImg").addClass("imageHidden");
 					$("#domenikaImg").addClass("imageHidden");
 					$("#anneImg").addClass("imageHidden");
-					}
-					else{
-						personInFocus = false;
-					$("#lauritzImg").removeClass("imageFocus");
-					$("#domenikaImg").removeClass("imageFocus");
-					$("#anneImg").removeClass("imageFocus");
-					$("#lauritzImg").removeClass("imageHidden");
-					$("#domenikaImg").removeClass("imageHidden");
-					$("#anneImg").removeClass("imageHidden");
-					}
-				});
+				
+					$("#lauritzText").addClass("teamTextShown");
+				}
+				else{
+					personInFocus = false;
+					resetTeamImages();
+				}
+			});
 
-				$("#domenikaImg").click(function(){
-					if(!personInFocus){
-						personInFocus = true;
+			$("#domenikaImg").click(function(){
+				if(!personInFocus){
+					personInFocus = true;
 					// $("#lauritzImg").addClass("imageFocus");
 					$("#domenikaImg").addClass("imageFocus");
 					// $("#anneImg").addClass("imageFocus");
@@ -85,21 +82,19 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 					$("#lauritzImg").addClass("imageHidden");
 					// $("#domenikaImg").addClass("imageHidden");
 					$("#anneImg").addClass("imageHidden");
-					}
-					else{
-						personInFocus = false;
-					$("#lauritzImg").removeClass("imageFocus");
-					$("#domenikaImg").removeClass("imageFocus");
-					$("#anneImg").removeClass("imageFocus");
-					$("#lauritzImg").removeClass("imageHidden");
-					$("#domenikaImg").removeClass("imageHidden");
-					$("#anneImg").removeClass("imageHidden");
-					}
-				});
 
-				$("#anneImg").click(function(){
-					if(!personInFocus){
-						personInFocus = true;
+					$("#domenikaText").addClass("teamTextShown");
+				}
+				else{
+					personInFocus = false;
+					resetTeamImages();
+				}
+			});
+
+
+			$("#anneImg").click(function(){
+				if(!personInFocus){
+					personInFocus = true;
 					// $("#lauritzImg").addClass("imageFocus");
 					// $("#domenikaImg").addClass("imageFocus");
 					$("#anneImg").addClass("imageFocus");
@@ -107,48 +102,65 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 					$("#lauritzImg").addClass("imageHidden");
 					$("#domenikaImg").addClass("imageHidden");
 					// $("#anneImg").addClass("imageHidden");
-					}
-					else{
-						personInFocus = false;
-					$("#lauritzImg").removeClass("imageFocus");
-					$("#domenikaImg").removeClass("imageFocus");
-					$("#anneImg").removeClass("imageFocus");
-					$("#lauritzImg").removeClass("imageHidden");
-					$("#domenikaImg").removeClass("imageHidden");
-					$("#anneImg").removeClass("imageHidden");
-					
-					}
-				});
+
+					$("#anneText").addClass("teamTextShown");
+				}
+				else{
+					personInFocus = false;
+					resetTeamImages();
+				}
+			});
+
+			function resetTeamImages(){
+				$("#lauritzImg").removeClass("imageFocus");
+				$("#domenikaImg").removeClass("imageFocus");
+				$("#anneImg").removeClass("imageFocus");
+				$("#lauritzImg").removeClass("imageHidden");
+				$("#domenikaImg").removeClass("imageHidden");
+				$("#anneImg").removeClass("imageHidden");
+				$("#anneText").removeClass("teamTextShown");
+				$("#lauritzText").removeClass("teamTextShown");
+				$("#domenikaText").removeClass("teamTextShown");
 
 
+			}
 
-				//erkennt wenn WYN(Menü) angeklickt wird
-				$("#WYNfixed").click(function(){
-						if(!wynMenuActive){
-						wynMenuActive = true;
-						//entfernt die alte Klasse und gibt die neue
-						$(".nav").removeClass("navOUT");
-						$(".nav").addClass("navIN");
-						// $(".nav").css({
+
+			$("#WYNfixed").click(function(){
+				if(!wynMenuActive){
+					wynMenuActive = true;
+					//entfernt die alte Klasse und gibt die neue
+					$(".nav").removeClass("navOUT");
+					$(".nav").addClass("navIN");
+					// $(".nav").css({
 						// "opacity":"0.1",
 						// "left":"15px"
 						// });	
 						
-						}
-						else{
+					}
+					else{
 						wynMenuActive = false;
 						//entfernt die alte Klasse und gibt die neue
 						$(".nav").removeClass("navIN");
 						$(".nav").addClass("navOUT");
 						// $(".nav").css({
-						// "opacity":"1",
-						// "left":"-800px"
-						// });	
-						
+							// "opacity":"1",
+							// "left":"-800px"
+							// });	
+
 
 						}
 
 					});
+
+			//wird sofort bei start der website aufgerufen;
+			//main Methode, loopt alle 5 millisekunden 
+			function main() {
+				
+
+
+				//erkennt wenn WYN(Menü) angeklickt wird
+				
 				
 				//ließt die eigenschaften von #WYNfixed:hover aus, wenn dieses keine eigenschaften hat, ist das Element NICHT mit der Maus in berührung
 				if ($('#WYNfixed:hover').length != 0 && !currHover ) {
@@ -186,19 +198,23 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 						"opacity":"0.1",
 						"left":"-2000px"
 					});	
-*/
+					*/
 					currHover = false;
 				}	
 
 			}
 
+			
+
 			//loopt die Main Methode alle 5 millisec
 			//kann mit zB. mainThread = 0; gestoppt werden
+			
+
 			var mainThread = setInterval(main, 1);
-		}
 
 
 
+		});
 	
 	</script>
 
@@ -225,7 +241,7 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 	
 	<div id = "mainScreen1" class = "screen">
 		<div>
-			<img id="WYN1" src="images/WYNstartpage.png" >
+			<img id="WYN1" type= "button" src="images/WYNstartpage.png" >
 		</div>
 	</div>
 	<!--</section>!-->
@@ -276,9 +292,9 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
     </section>
 
     <div class= "trennerdunkel">
-    <div id="dasTeamText">
+    	<div id="dasTeamText">
     		<p> <h1 style="margin: auto">DAS TEAM</h1> </p>
-    </div>
+    	</div>
 
     <!-- team Bilder -->
 
@@ -286,11 +302,21 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
     <img src="/images/domenika_cutout_bw.png" id="domenikaImg">
     <img src="/images/lauritz_cutout_bw.png" id="lauritzImg">
 
+    <div id="anneText" class="teamText">
+
+    </div>
+
+    <div id="domenikaText" class="teamText">
+
+    </div>
+    
+	<div id="lauritzText" class="teamText">
+
+    </div>
+    
 
 
-
-
-     </div>
+    </div>
 
     <div class= "trennerhell"> </div>
 
@@ -484,7 +510,7 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 </div>
 
 
-<!--	<script>
+	<script>
 
 	$(function () { // wait for document ready
 		// init
@@ -507,7 +533,7 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 				.addTo(controller);
 		}
 	});
-</script> -->
+</script> 
 
 </body>
 </html>
