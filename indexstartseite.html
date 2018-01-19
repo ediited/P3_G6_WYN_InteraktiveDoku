@@ -1,4 +1,4 @@
-<!D<DOCTYPE html>
+<!DOCTYPE html>
 <!-- 
 
 Dokumentation Gruppe 6
@@ -37,64 +37,176 @@ im Rahmen des dritten Fachsemesters von Interactive Media Design an der Hochschu
 	<!-- wyn change color on hover -->
 	<script type="text/javascript">
 
-		var currHover = false;	
+
+	//variablen um permanente Zustände zu merken 
+	//eg ob das menü offen ist oder sowas
+		var currHover = false;
+		var wynMenuActive = false;
+		var personInFocus = false;
 
 
-		  window.onload = function() {            
-function test() {
-  		if ($('#WYNfixed:hover').length != 0 && !currHover ) {
-    		console.log("menüwyn wird überhovert");
-
-    		$("#WYNfixed").css({
-    			"height":"50",
-    			"width":"50",
-    			"transition":"opacity 0.5 ease, height 0.5s ease, width 0.4s ease",
-    			"opacity":"1"
 
 
-    			});
-
-    		$(".nav").css({
-    			"transition":"opacity 0.5 ease, margin.left 5s ease, width 0.4s ease",
-    			"opacity":"1",
-    			"margin-left":"15",
-    			"margin-top":"15"
-    		});
-
-    		currHover = true;
-		}	
-
-		if ($('#WYNfixed:hover').length == 0 && currHover) {
-    		console.log("menüwyn wird verlassen");
-    		$("#WYNfixed").css({
-    			"height":"30",
-    			"width":"30",
-    			"transition":"opacity 0.5s ease, height 0.5s ease, width 0.4s ease",
-    			"opacity":"0.2"
-
-
-    			});
-    		$(".nav").css({
-    			"transition":"opacity 0.5 ease, margin-left 5s ease, width 0.4s ease",
-    			"opacity":"0.1",
-    			"margin-left":"-2000",
-    			"margn-top":"-100"
-    		});	
-    		currHover = false;
-		}	
+		//wird sofort bei start der website aufgerufen;
+		window.onload = function() {            
 			
-}
-setInterval(test, 10);
-}
+			//main Methode, loopt alle 5 millisekunden 
+			function main() {
+
+				$("#lauritzImg").click(function(){
+					if(!personInFocus){
+						personInFocus = true;
+					$("#lauritzImg").addClass("imageFocus");
+					// $("#domenikaImg").addClass("imageFocus");
+					// $("#anneImg").addClass("imageFocus");
+
+					// $("#lauritzImg").addClass("imageHidden");
+					$("#domenikaImg").addClass("imageHidden");
+					$("#anneImg").addClass("imageHidden");
+					}
+					else{
+						personInFocus = false;
+					$("#lauritzImg").removeClass("imageFocus");
+					$("#domenikaImg").removeClass("imageFocus");
+					$("#anneImg").removeClass("imageFocus");
+					$("#lauritzImg").removeClass("imageHidden");
+					$("#domenikaImg").removeClass("imageHidden");
+					$("#anneImg").removeClass("imageHidden");
+					}
+				});
+
+				$("#domenikaImg").click(function(){
+					if(!personInFocus){
+						personInFocus = true;
+					// $("#lauritzImg").addClass("imageFocus");
+					$("#domenikaImg").addClass("imageFocus");
+					// $("#anneImg").addClass("imageFocus");
+
+					$("#lauritzImg").addClass("imageHidden");
+					// $("#domenikaImg").addClass("imageHidden");
+					$("#anneImg").addClass("imageHidden");
+					}
+					else{
+						personInFocus = false;
+					$("#lauritzImg").removeClass("imageFocus");
+					$("#domenikaImg").removeClass("imageFocus");
+					$("#anneImg").removeClass("imageFocus");
+					$("#lauritzImg").removeClass("imageHidden");
+					$("#domenikaImg").removeClass("imageHidden");
+					$("#anneImg").removeClass("imageHidden");
+					}
+				});
+
+				$("#anneImg").click(function(){
+					if(!personInFocus){
+						personInFocus = true;
+					// $("#lauritzImg").addClass("imageFocus");
+					// $("#domenikaImg").addClass("imageFocus");
+					$("#anneImg").addClass("imageFocus");
+
+					$("#lauritzImg").addClass("imageHidden");
+					$("#domenikaImg").addClass("imageHidden");
+					// $("#anneImg").addClass("imageHidden");
+					}
+					else{
+						personInFocus = false;
+					$("#lauritzImg").removeClass("imageFocus");
+					$("#domenikaImg").removeClass("imageFocus");
+					$("#anneImg").removeClass("imageFocus");
+					$("#lauritzImg").removeClass("imageHidden");
+					$("#domenikaImg").removeClass("imageHidden");
+					$("#anneImg").removeClass("imageHidden");
+					
+					}
+				});
+
+
+
+				//erkennt wenn WYN(Menü) angeklickt wird
+				$("#WYNfixed").click(function(){
+						if(!wynMenuActive){
+						wynMenuActive = true;
+						//entfernt die alte Klasse und gibt die neue
+						$(".nav").removeClass("navOUT");
+						$(".nav").addClass("navIN");
+						// $(".nav").css({
+						// "opacity":"0.1",
+						// "left":"15px"
+						// });	
+						
+						}
+						else{
+						wynMenuActive = false;
+						//entfernt die alte Klasse und gibt die neue
+						$(".nav").removeClass("navIN");
+						$(".nav").addClass("navOUT");
+						// $(".nav").css({
+						// "opacity":"1",
+						// "left":"-800px"
+						// });	
+						
+
+						}
+
+					});
+				
+				//ließt die eigenschaften von #WYNfixed:hover aus, wenn dieses keine eigenschaften hat, ist das Element NICHT mit der Maus in berührung
+				if ($('#WYNfixed:hover').length != 0 && !currHover ) {
+					console.log("menüwyn wird überhovert");
+
+					//PlaceHolder
+					$("#WYNfixed").css({
+						"height":"50",
+						"width":"50",
+						"transition":"opacity 0.5s ease, height 0.5s ease, width 0.4s ease",
+						"opacity":"1"
+
+
+					});
+
+					//durcg das umstellen von currHover wird dieser IF Block nur einmal ausgeführt, und kann sich erst wieder wiederholen wenn das Hovern beendet wird
+					currHover = true;
+				}	
+
+				if ($('#WYNfixed:hover').length == 0 && currHover ) {
+					//ende des Hoverns
+					console.log("menüwyn wird verlassen");
+					$("#WYNfixed").css({
+						"height":"30",
+						"width":"30",
+						"transition":"opacity 0.5s ease, height 0.5s ease, width 0.4s ease",
+						"opacity":"0.2"
+
+
+					});
+
+/*
+					$(".nav").css({
+						"transition":"opacity 0.5s ease, left 3s ease-in",
+						"opacity":"0.1",
+						"left":"-2000px"
+					});	
+*/
+					currHover = false;
+				}	
+
+			}
+
+			//loopt die Main Methode alle 5 millisec
+			//kann mit zB. mainThread = 0; gestoppt werden
+			var mainThread = setInterval(main, 1);
+		}
+
+
 
 	
-    </script>
+	</script>
 
 
 </head>
 <body>
 <div id = "WYNwrapper">
-	<a href="index.html"><img id="WYNfixed" src="images/WYNstartpage.png"></a>
+	<a ><img id="WYNfixed" src="images/WYNstartpage.png"></a>
 <div class="navbar">
 	    <ul class="nav">
 		<li><a href="indexuserproblem.html">User & Problem</a></li>
@@ -163,7 +275,22 @@ setInterval(test, 10);
     </div>
     </section>
 
-    <div class= "trennerdunkel"> </div>
+    <div class= "trennerdunkel">
+    <div id="dasTeamText">
+    		<p> <h1 style="margin: auto">DAS TEAM</h1> </p>
+    </div>
+
+    <!-- team Bilder -->
+
+    <img src="/images/anne_cutout_bw.png" id="anneImg">
+    <img src="/images/domenika_cutout_bw.png" id="domenikaImg">
+    <img src="/images/lauritz_cutout_bw.png" id="lauritzImg">
+
+
+
+
+
+     </div>
 
     <div class= "trennerhell"> </div>
 
@@ -358,6 +485,7 @@ setInterval(test, 10);
 
 
 <!--	<script>
+
 	$(function () { // wait for document ready
 		// init
 		var controller = new ScrollMagic.Controller({
