@@ -47,11 +47,19 @@ __/\\\______________/\\\________________/\\\\\_____/\\\_
 	<title>WYN</title>
 
 
-	<!-- wyn change color on hover -->
 	<script type="text/javascript">
 		$(document).ready(function(){
+			$("body").toggleClass("noScroll");
 
+			$("#startVideo").css("height","100%");
+			$('video').on('ended',function(){
+      		$("body").toggleClass("noScroll");
+      		$("#startVideo").css("visibility","hidden");
+      		$("#videoBg").css("visibility","hidden")
 
+    		});
+
+			
 			//im Code verstecken! nicht vergessen
 			//SUPER WICHTIG DO NOT TOUCH !!!!!
 			  $( window ).konami({
@@ -263,6 +271,15 @@ __/\\\______________/\\\________________/\\\\\_____/\\\_
 	<!--<section class="panel green">!-->
 	
 	<div id = "mainScreen1" class = "screen">
+		 <div id="videoBg" style="width: 100%; height:100%; background-color:black">
+		 <video id="startVideo" preload="true" autoplay="autoplay">
+		 		<source src="images/wednesday.mp4" type="video/mp4"/>
+		 		
+		 	</video>
+		 </div>		
+
+
+
 		<div>
 			<img id="WYN1" type= "button" src="images/WYNstartpage.png" >
 		</div>
